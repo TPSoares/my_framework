@@ -4,7 +4,7 @@
     $config = array();
 
     if(ENVIRONMENT == "development") {
-        define("BASE_URL", "http://localhost/mvc_structure");
+        define("BASE_URL", "yourbaseurl");
         $config["dbname"] = "yourdbname";
         $config["host"] = "yourhost";
         $config["dbuser"] = "yourdbuser";
