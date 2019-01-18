@@ -5,10 +5,10 @@
 
     if(ENVIRONMENT == "development") {
         define("BASE_URL", "http://localhost/mvc_structure");
-        $config["dbname"] = "dbname";
-        $config["host"] = "localhost";
-        $config["dbuser"] = "tenodar";
-        $config["dbpass"] = "teste";
+        $config["dbname"] = "yourdbname";
+        $config["host"] = "yourhost";
+        $config["dbuser"] = "yourdbuser";
+        $config["dbpass"] = "yourdbpass";
     } else {
         define("BASE_URL", "yourbaseurl");
         $config["dbname"] = "yourdbname";
