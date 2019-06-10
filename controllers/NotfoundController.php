@@ -3,7 +3,7 @@
 
     use \Core\Controller;
 
-    class HomeController extends Controller 
+    class NotfoundController extends Controller 
     {
         public function index() 
         {
@@ -12,7 +12,7 @@
             
             );
 
-            $this->loadTemplate("home", $data);
+            $this->loadView("404", $data);
 
         }
     }

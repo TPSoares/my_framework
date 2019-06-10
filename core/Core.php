@@ -1,4 +1,6 @@
 <?php
+    namespace Core;
+
     class Core {
         public function run() {
             $url = "/";
@@ -29,11 +31,21 @@
                 }
 
             } else {
-                $currentController = "homeController";
+                $currentController = "HomeController";
                 $currentAction = "index";
             }
 
-            $controller = new $currentController();
+            $currentController = ucfirst($currentController);
+
+            $prefix = '\Controllers\\';
+
+            if(!file_exists('Controllers/' . $currentController . '.php') || !method_exists($prefix . $currentController, $currentAction)) {
+                $currentController = $prefix . 'NotfoundController';
+                $currentAction = 'index';
+            }
+
+            $newController = $prefix . $currentController;
+            $controller = new $newController();
 
             call_user_func_array(array($controller, $currentAction), $params);
         }

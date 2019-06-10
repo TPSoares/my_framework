@@ -1,0 +1,19 @@
+{
+    "name": "thiago/mvc_structure",
+    "authors": [
+        {
+            "name": "TPSoares",
+            "email": "thiagopina.soares@gmail.com"
+        }
+    ],
+    "require": {
+        
+    },
+    "autoload":{
+		"psr-4":{
+			"Controllers\\":"Controllers/",
+			"Models\\":"Models/",
+			"Core\\":"Core/"
+		}
+	}
+}
