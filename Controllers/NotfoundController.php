@@ -7,12 +7,12 @@
     {
         public function index() 
         {
-
-            $data = array(
+            echo "NOT FOUND";   
+            // $data = array(
             
-            );
+            // );
 
-            $this->loadView("404", $data);
+            // $this->loadView("404", $data);
 
         }
     }

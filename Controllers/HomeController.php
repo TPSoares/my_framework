@@ -15,5 +15,12 @@
             $this->loadTemplate("home", $data);
 
         }
+
+        public function dota() 
+        {
+
+            echo "DOTA";
+
+        }
     }
 ?>
