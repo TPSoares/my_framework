@@ -2,6 +2,7 @@
     namespace Controllers;
 
     use \Core\Controller;
+    use \Models\Example;
 
     class HomeController extends Controller 
     {
@@ -9,10 +10,14 @@
         {
 
             $data = array(
-            
+                'nome' => 'nome teste',
+                'email' => 'starcraft@email.com'
             );
 
-            $this->loadTemplate("home", $data);
+            $example = new Example();
+            $teste =  $example->create($data);
+            echo $teste;
+            // $this->loadTemplate("home", $data);
 
         }
 
